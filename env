@@ -1,0 +1,8 @@
+ANTLR_VERSION=4.7.1
+ANTLR_JAR=antlr-${ANTLR_VERSION}-complete.jar
+ANTLR_LOCATION=$(pwd)/lib/${ANTLR_JAR}
+if [ ! -f $ANTLR_LOCATION ] ; then
+    wget http://www.antlr.org/download/${ANTLR_JAR} -O $ANTLR_LOCATION
+fi
+
+alias antlr4="java -jar ${ANTLR_LOCATION}"
